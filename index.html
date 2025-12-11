@@ -94,11 +94,15 @@
         </p>
 
         <div class="contact-wrapper">
-            <form class="contact-form" method="post" action="#">
+            <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                <input type="hidden" name="form-name" value="contact">
+                <p class="hidden" style="display:none;">
+                    <label>Don't fill this out if you're human: <input name="bot-field"></label>
+                </p>
                 <div class="form-row">
                     <div class="form-group">
                         <label for="name">Name</label>
-                        <input id="name" name="name" type="text" placeholder="Your name">
+                        <input id="name" name="name" type="text" placeholder="Your name" required>
                     </div>
                     <div class="form-group">
                         <label for="company">Company</label>
@@ -108,7 +112,7 @@
                 <div class="form-row">
                     <div class="form-group">
                         <label for="email">Work Email</label>
-                        <input id="email" name="email" type="email" placeholder="you@company.com">
+                        <input id="email" name="email" type="email" placeholder="you@company.com" required>
                     </div>
                     <div class="form-group">
                         <label for="role">Role</label>
