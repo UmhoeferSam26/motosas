@@ -79,6 +79,38 @@ nav a.active {
     text-decoration: underline;
 }
 
+/* Language toggle */
+.lang-toggle {
+    display: flex;
+    align-items: center;
+    margin-left: 1.5rem;
+}
+
+.lang-toggle a {
+    color: var(--accent-gold);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding: 0.4rem 0.6rem;
+    border-radius: 4px;
+    transition: background 0.3s, opacity 0.3s;
+}
+
+.lang-toggle a:hover {
+    background: rgba(226, 184, 53, 0.15);
+}
+
+.lang-toggle a.active-lang {
+    background: var(--accent-gold);
+    color: var(--navy-dark);
+}
+
+.lang-toggle .separator {
+    color: var(--accent-gold);
+    opacity: 0.5;
+    margin: 0 0.2rem;
+}
+
 /* Hero */
 .page-hero {
     background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy-mid) 100%);
@@ -347,11 +379,22 @@ footer p + p {
         gap: 0.8rem;
     }
 
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
     nav a {
         margin-left: 0;
         margin-right: 1rem;
         display: inline-block;
         margin-bottom: 0.3rem;
+    }
+
+    .lang-toggle {
+        margin-left: 0;
+        margin-top: 0.5rem;
     }
 
     .page-hero {
