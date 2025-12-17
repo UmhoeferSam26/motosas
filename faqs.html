@@ -43,22 +43,47 @@
                  alt="Motosas Logo"
                  class="logo-img">
         </a>
-        <nav>
+        <nav class="main-nav">
             <a href="index.html">Home</a>
-            <a href="about.html">About</a>
+            <a href="about.html" class="active">About</a>
             <a href="how-it-works.html">How It Works</a>
             <a href="products.html">Example Products</a>
             <a href="solutions.html">Our Solutions</a>
-            <a href="faqs.html" class="active">FAQs</a>
-            <a href="index.html#contact">Contact</a>
-            <div class="lang-toggle">
-                <a href="faqs.html" class="active-lang">EN</a>
-                <span class="separator">|</span>
-                <a href="https://polish--motosas.netlify.app/faqs.html">PL</a>
+            <a href="faqs.html">FAQs</a>
+            <div class="nav-right">
+                <a href="index.html#contact">Contact</a>
+                <div class="lang-toggle">
+                    <a href="about.html" class="active-lang">EN</a>
+                    <span class="separator">|</span>
+                    <a href="https://polish--motosas.netlify.app/about.html">PL</a>
+                </div>
             </div>
         </nav>
     </div>
 </header>
+
+<style>
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.lang-toggle {
+    font-size: 0.9rem;
+}
+
+.active-lang {
+    font-weight: 600;
+}
+</style>
 
 <section class="page-hero">
     <div class="container">
