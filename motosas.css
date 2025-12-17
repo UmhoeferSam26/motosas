@@ -210,6 +210,24 @@ nav a.active {
     margin-right: auto;
 }
 
+/* Reduce spacing when subtitle is followed by section image */
+.section-subtitle + .section-image {
+    margin-top: -1rem;
+}
+
+/* Section image */
+.section-image {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.section-image .featured-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
 /* Grids & cards */
 .grid-3 {
     display: grid;
