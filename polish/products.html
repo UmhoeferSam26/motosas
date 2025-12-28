@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Przykładowe produkty i opcje brandingu | Motosas</title>
+    <link rel="stylesheet" href="../motosas.css">
+</head>
+<body>
+<header>
+    <div class="container header-content">
+        <a href="../index.html" class="logo-text">
+            <img src="https://i.ibb.co/TqgFM9np/Logo-Featuring-Car-Silhouette-and-Signal-Waves.png"
+                 alt="Logo Motosas"
+                 class="logo-img">
+        </a>
+        <button class="mobile-menu-toggle" aria-label="Przełącz menu nawigacyjne">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="main-nav">
+            <a href="../index.html">Strona główna</a>
+            <a href="../about.html">O nas</a>
+            <a href="../how-it-works.html">Jak to działa</a>
+            <a href="products.html" class="active">Przykładowe produkty</a>
+            <a href="../solutions.html">Nasze rozwiązania</a>
+            <a href="../faqs.html">FAQ</a>
+            <div class="nav-right">
+                <a href="../index.html#contact">Kontakt</a>
+                <div class="lang-toggle">
+                    <a href="../about.html">EN</a>
+                    <span class="separator">|</span>
+                    <a href="products.html" class="active-lang">PL</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<section class="page-hero">
+    <div class="container">
+        <h1>Przykładowe produkty i opcje brandingu</h1>
+        <p>
+            Pouch'e Motosas są zaprojektowane tak, aby nosić <span class="highlight">Twoją markę</span>.
+            Pouch'e z logo lub w pełni białe etykiety dają prosty, fizyczny przypominacz o Twojej organizacji
+            za każdym razem, gdy kierowca sięga po klucze.
+        </p>
+    </div>
+</section>
+
+<main>
+    <section class="content-section">
+        <h2 class="section-title">Pouch z brandingiem domowym</h2>
+        <p class="section-subtitle">
+            Poniżej przykład naszej własnej torby Motosas z brandem. Ten układ można dostosować dla ubezpieczycieli,
+            grup dealerskich, brokerów, flot lub OEM-ów, zamieniając logo, kolory i komunikaty.
+        </p>
+
+        <div class="grid-2">
+            <div class="card">
+                <img src="https://i.postimg.cc/BvcjyQ66/Final-Small-Moto-SAS-Front.jpg"
+                     alt="Widok frontu pouch Motosas"
+                     class="product-image">
+                <div class="product-meta">
+                    <h3>Branding Motosas</h3>
+                    <p>
+                        Przykładowy pouch z brandem Motosas. Ten układ pokazuje wyraźne miejsce na logo na klapce oraz przestrzeń
+                        na tylnym panelu na krótką przypominajkę o bezpieczeństwie lub kod QR prowadzący do Twoich stron.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="product-meta">
+                    <h3>Jak może wyglądać Twój branding</h3>
+                    <p style="margin-bottom:0.8rem;">
+                        Pozycja logo na froncie może być użyta do:
+                    </p>
+                    <ul>
+                        <li>Umieszczenia logo firmy</li>
+                        <li>Dodania krótkiego komunikatu bezpieczeństwa</li>
+                        <li>Wstawienia kodu QR prowadzącego do portalu roszczeń lub pomocy</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Motosas. Specjalistyczne rozwiązania B2B zmniejszające ryzyko kradzieży samochodów bezkluczykowych. Wszelkie prawa zastrzeżone.</p>
+    <p><strong>Numer kontaktowy:</strong> 02039165235</p>
+    <p><strong>Adres:</strong> 116 High Street, Epping, Essex, United Kingdom, CM16 4AF</p>
+    <p><strong>Email:</strong> office@motosas.com</p>
+</footer>
+<script>
+(function() {
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const mainNav = document.querySelector('.main-nav');
+
+    if (menuToggle && mainNav) {
+        menuToggle.addEventListener('click', function() {
+            menuToggle.classList.toggle('active');
+            mainNav.classList.toggle('active');
+        });
+
+        const navLinks = mainNav.querySelectorAll('a');
+        navLinks.forEach(function(link) {
+            link.addEventListener('click', function() {
+                menuToggle.classList.remove('active');
+                mainNav.classList.remove('active');
+            });
+        });
+
+        document.addEventListener('click', function(event) {
+            if (!menuToggle.contains(event.target) && !mainNav.contains(event.target)) {
+                menuToggle.classList.remove('active');
+                mainNav.classList.remove('active');
+            }
+        });
+    }
+})();
+</script>
+</body>
+</html>
