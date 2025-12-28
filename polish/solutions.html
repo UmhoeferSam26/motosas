@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasze rozwiązania | Motosas</title>
+    <link rel="stylesheet" href="../motosas.css">
+</head>
+<body>
+<header>
+    <div class="container header-content">
+        <a href="../index.html" class="logo-text">
+            <img src="https://i.ibb.co/TqgFM9np/Logo-Featuring-Car-Silhouette-and-Signal-Waves.png"
+                 alt="Logo Motosas"
+                 class="logo-img">
+        </a>
+        <button class="mobile-menu-toggle" aria-label="Przełącz menu nawigacyjne">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="main-nav">
+            <a href="../index.html">Strona główna</a>
+            <a href="../about.html">O nas</a>
+            <a href="../how-it-works.html">Jak to działa</a>
+            <a href="../products.html">Przykładowe produkty</a>
+            <a href="solutions.html" class="active">Nasze rozwiązania</a>
+            <a href="../faqs.html">FAQ</a>
+            <div class="nav-right">
+                <a href="../index.html#contact">Kontakt</a>
+                <div class="lang-toggle">
+                    <a href="../about.html">EN</a>
+                    <span class="separator">|</span>
+                    <a href="solutions.html" class="active-lang">PL</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<section class="page-hero">
+    <div class="container">
+        <h1>Nasze rozwiązania dla Twojego biznesu</h1>
+        <p>Pouch'e Faraday Motosas oferują praktyczne rozwiązania zapobiegające kradzieży samochodów bezkluczykowych dla firm, które chcą chronić swoich klientów i floty.</p>
+    </div>
+</section>
+
+<main>
+    <section class="content-section">
+        <h2 class="section-title">Świadomość marki dla wszystkich firm</h2>
+        <p class="section-subtitle">
+            Każdy pouch Motosas to okazja do wzmocnienia Twojej marki, jednocześnie dostarczając realnej wartości klientom.
+            Wręczając pouch'e Faraday z logo, pokazujesz swoje zaangażowanie w ich bezpieczeństwo.
+        </p>
+
+        <div class="grid-2">
+            <div>
+                <h3 style="font-size:1.3rem; color:#0D1A3A; margin-bottom:0.7rem;">Buduj zaufanie poprzez ochronę</h3>
+                <p style="margin-bottom:0.9rem;">
+                    Gdy klienci otrzymują wysokiej jakości pouch z Twoim logo, widzą namacalny dowód
+                    na troskę o ich bezpieczeństwo. Ten fizyczny przypominacz pozostaje w ich domu, wzmacniając markę
+                    za każdym razem, gdy zabezpieczają klucze do samochodu.
+                </p>
+                <p style="margin-bottom:0.9rem;">
+                    W przeciwieństwie do komunikacji cyfrowej, która może zostać zignorowana, branded pouch zapewnia trwałą
+                    wartość, z której klienci korzystają codziennie. To buduje pozytywne skojarzenia i lojalność.
+                </p>
+            </div>
+            <div>
+                <h3 style="font-size:1.3rem; color:#0D1A3A; margin-bottom:0.7rem;">Efektywny kosztowo marketing</h3>
+                <p style="margin-bottom:0.9rem;">
+                    Dystrybucja pouchy jako części programów powitalnych, roszczeń lub ofert marketingowych zapewnia realną
+                    ekspozycję marki bez dużych kosztów bieżących.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2>Chcesz pilotaż?</h2>
+        <p>Możemy pomóc zaprojektować prosty test lub pilotaż, który pokaże, jak Motosas sprawdza się w Twoich procesach.</p>
+        <a href="../index.html#contact" class="cta-button">Omów pilotaż</a>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Motosas. Specjalistyczne rozwiązania B2B zmniejszające ryzyko kradzieży samochodów bezkluczykowych. Wszelkie prawa zastrzeżone.</p>
+    <p><strong>Numer kontaktowy:</strong> 02039165235</p>
+    <p><strong>Adres:</strong> 116 High Street, Epping, Essex, United Kingdom, CM16 4AF</p>
+    <p><strong>Email:</strong> office@motosas.com</p>
+</footer>
+<script>
+(function() {
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const mainNav = document.querySelector('.main-nav');
+
+    if (menuToggle && mainNav) {
+        menuToggle.addEventListener('click', function() {
+            menuToggle.classList.toggle('active');
+            mainNav.classList.toggle('active');
+        });
+
+        const navLinks = mainNav.querySelectorAll('a');
+        navLinks.forEach(function(link) {
+            link.addEventListener('click', function() {
+                menuToggle.classList.remove('active');
+                mainNav.classList.remove('active');
+            });
+        });
+
+        document.addEventListener('click', function(event) {
+            if (!menuToggle.contains(event.target) && !mainNav.contains(event.target)) {
+                menuToggle.classList.remove('active');
+                mainNav.classList.remove('active');
+            }
+        });
+    }
+})();
+</script>
+</body>
+</html>
