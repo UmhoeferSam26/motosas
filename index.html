@@ -14,14 +14,9 @@
                  alt="Motosas Logo"
                  class="logo-img">
         </a>
-        <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
         <nav class="main-nav">
-            <a href="index.html" class="active">Home</a>
-            <a href="about.html">About</a>
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About</a>
             <a href="how-it-works.html">How It Works</a>
             <a href="products.html">Example Products</a>
             <a href="solutions.html">Our Solutions</a>
@@ -31,12 +26,36 @@
                 <div class="lang-toggle">
                     <a href="about.html" class="active-lang">EN</a>
                     <span class="separator">|</span>
-                    <a href="polish/index.html">PL</a>
+                    <a href="https://polish--motosas.netlify.app/about.html">PL</a>
                 </div>
             </div>
         </nav>
     </div>
 </header>
+
+<style>
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.lang-toggle {
+    font-size: 0.9rem;
+}
+
+.active-lang {
+    font-weight: 600;
+}
+</style>
+
 
 <section class="page-hero">
     <div class="container">
@@ -68,19 +87,77 @@
             </div>
             <div class="card">
                 <h3>Designed for Everyday Use</h3>
-                <p>Simple construction and quick guidance make it easy to adopt this protection into daily routines.</p>
+                <p>Compact, durable and easy to understand. If the key is stored inside the inner pocket, it is shielded. No batteries, apps or pairing required.</p>
             </div>
             <div class="card">
-                <h3>Scalable for Business</h3>
-                <p>Solution designed for distribution across insurance programmes, fleets and dealer offers.</p>
+                <h3>B2B-Focused Deployment</h3>
+                <p>Ideal for insurers, brokers, fleets and dealers who want a scalable, branded prevention measure to support customer education and risk reduction.</p>
             </div>
         </div>
     </section>
 
-    <section class="cta-section">
-        <h2>Want to try it?</h2>
-        <p>Request a sample pack to test Motosas with your own keys and vehicles and see how it performs in your environment.</p>
-        <a href="index.html#contact" class="cta-button">Request a Sample Pack</a>
+    <section id="customers" class="content-section dark">
+        <h2 class="section-title">Our Solutions</h2>
+        <p class="section-subtitle">Motosas is built around professional partners who manage vehicle risk at scale.</p>
+
+        <div class="customers-grid">
+            <div class="card">
+                <h4>Insurance Solutions</h4>
+                <p>Support policyholders in higher risk postcodes or keyless heavy portfolios with a physical prevention tool that complements messaging and pricing.</p>
+            </div>
+            <div class="card">
+                <h4>Retail Solutions</h4>
+                <p>Provide pouches with every keyless vehicle, reinforce your handover script and demonstrate a proactive stance on theft prevention.</p>
+            </div>
+            <div class="card">
+                <h4>Fleet Solutions</h4>
+                <p>Help drivers follow a consistent storage routine out of hours and build Faraday style shielding into your wider loss prevention and driver education policy.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="content-section dark">
+        <h2 class="section-title">Contact &amp; Sample Requests</h2>
+        <p class="section-subtitle">
+            Share a few details about your organisation, and we’ll come back to you to discuss testing, volumes and branding options. Alternatively, you can email or call us at:
+        </p>
+<p class="section-subtitle">
+            office@motosas.com or 02039165235
+        </p>
+
+        <div class="contact-wrapper">
+            <form class="contact-form" name="contact" method="POST" action="/thank-you.html" data-netlify="true" netlify-honeypot="bot-field">
+                <input type="hidden" name="form-name" value="contact">
+                <p class="hidden" style="display:none;">
+                    <label>Don't fill this out if you're human: <input name="bot-field"></label>
+                </p>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input id="name" name="name" type="text" placeholder="Your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Company</label>
+                        <input id="company" name="company" type="text" placeholder="Organisation name">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Work Email</label>
+                        <input id="email" name="email" type="email" placeholder="you@company.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="role">Role</label>
+                        <input id="role" name="role" type="text" placeholder="e.g. Motor Underwriter, Fleet Manager">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message">How can we help?</label>
+                    <textarea id="message" name="message" placeholder="Tell us about your use case, approximate volumes and timelines."></textarea>
+                </div>
+                <button type="submit" class="cta-button">Submit enquiry</button>
+            </form>
+        </div>
     </section>
 </main>
 
@@ -88,37 +165,7 @@
     <p>&copy; 2025 Motosas. Specialist B2B keyless car theft risk reduction solutions. All rights reserved.</p>
     <p><strong>Contact Number:</strong> 02039165235</p>
     <p><strong>Address:</strong> 116 High Street, Epping, Essex, United Kingdom, CM16 4AF</p>
-    <p><strong>Email:</strong> office@motosas.com</p>
+    <p><strong>Email:</strong> office@motosas.com</p></p>
 </footer>
-<script>
-(function() {
-    const menuToggle = document.querySelector('.mobile-menu-toggle');
-    const mainNav = document.querySelector('.main-nav');
-
-    if (menuToggle && mainNav) {
-        menuToggle.addEventListener('click', function() {
-            menuToggle.classList.toggle('active');
-            mainNav.classList.toggle('active');
-        });
-
-        // Close menu when clicking on a link
-        const navLinks = mainNav.querySelectorAll('a');
-        navLinks.forEach(function(link) {
-            link.addEventListener('click', function() {
-                menuToggle.classList.remove('active');
-                mainNav.classList.remove('active');
-            });
-        });
-
-        // Close menu when clicking outside
-        document.addEventListener('click', function(event) {
-            if (!menuToggle.contains(event.target) && !mainNav.contains(event.target)) {
-                menuToggle.classList.remove('active');
-                mainNav.classList.remove('active');
-            }
-        });
-    }
-})();
-</script>
 </body>
 </html>
