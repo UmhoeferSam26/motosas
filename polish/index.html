@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motosas | Redukcja ryzyka kradzieży samochodów bezkluczykowych</title>
+    <link rel="stylesheet" href="../motosas.css">
+</head>
+<body>
+<header>
+    <div class="container header-content">
+        <a href="../index.html" class="logo-text">
+            <img src="https://i.ibb.co/TqgFM9np/Logo-Featuring-Car-Silhouette-and-Signal-Waves.png"
+                 alt="Logo Motosas"
+                 class="logo-img">
+        </a>
+        <button class="mobile-menu-toggle" aria-label="Przełącz menu nawigacyjne">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="main-nav">
+            <a href="../index.html" class="active">Strona główna</a>
+            <a href="../about.html">O nas</a>
+            <a href="../how-it-works.html">Jak to działa</a>
+            <a href="../products.html">Przykładowe produkty</a>
+            <a href="../solutions.html">Nasze rozwiązania</a>
+            <a href="../faqs.html">FAQ</a>
+            <div class="nav-right">
+                <a href="../index.html#contact">Kontakt</a>
+                <div class="lang-toggle">
+                    <a href="../about.html">EN</a>
+                    <span class="separator">|</span>
+                    <a href="about.html" class="active-lang">PL</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<section class="page-hero">
+    <div class="container">
+        <h1>Zmniejsz ryzyko kradzieży samochodu bez kluczyka dzięki sprawdzonemu narzędziu zapobiegawczemu</h1>
+        <p>Pouch'e Faraday Motosas zostały zaprojektowane, aby znacząco zmniejszać podatność na ataki typu relay dla ubezpieczycieli, flot i dealerów poprzez ekranowanie breloków bezkluczykowych.</p>
+        <div class="btn-row">
+            <a href="how-it-works.html" class="cta-button">Jak działa ekranowanie</a>
+            <a href="../index.html#contact" class="secondary-button">Zamów pakiet próbny</a>
+        </div>
+    </div>
+</section>
+
+<main>
+    <section class="content-section" id="about">
+        <h2 class="section-title">Prosta, praktyczna warstwa ochronna</h2>
+        <p class="section-subtitle">
+            Ataki typu relay są szybkie, ciche i coraz powszechniejsze. Pouch'e Motosas oferują praktyczny, nisko inwazyjny sposób
+            pomagający kierowcom i organizacjom zarządzać tym ryzykiem jako częścią szerszej strategii bezpieczeństwa pojazdów.
+        </p>
+
+        <div class="section-image">
+            <img src="https://i.postimg.cc/Gt46BtTT/Final-Small-Moto-SAS-with-Key-Front.jpg" alt="Pouch Faraday Motosas z brelokiem" class="featured-image">
+        </div>
+
+        <div class="grid-3">
+            <div class="card">
+                <h3>Ekranowany pouch</h3>
+                <p>Warstwowe materiały przewodzące pomagają zmniejszyć lub zablokować sygnały radiowe z breloków bezkluczykowych, gdy znajdują się w chronionej kieszeni.</p>
+            </div>
+            <div class="card">
+                <h3>Zaprojektowane do codziennego użytku</h3>
+                <p>Prosta konstrukcja i szybkie instrukcje ułatwiają wprowadzenie tej ochrony w codziennych nawykach użytkowników.</p>
+            </div>
+            <div class="card">
+                <h3>Skalowalne dla biznesu</h3>
+                <p>Rozwiązanie gotowe do dystrybucji w ramach programów ubezpieczeniowych, floty czy ofert dealerskich.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2>Chcesz przetestować?</h2>
+        <p>Zamów pakiet próbny, aby przetestować Motosas z własnymi kluczami i pojazdami oraz zobaczyć, jak sprawdza się w Twoim środowisku.</p>
+        <a href="../index.html#contact" class="cta-button">Zamów pakiet próbny</a>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Motosas. Specjalistyczne rozwiązania B2B zmniejszające ryzyko kradzieży samochodów bezkluczykowych. Wszelkie prawa zastrzeżone.</p>
+    <p><strong>Numer kontaktowy:</strong> 02039165235</p>
+    <p><strong>Adres:</strong> 116 High Street, Epping, Essex, United Kingdom, CM16 4AF</p>
+    <p><strong>Email:</strong> office@motosas.com</p>
+</footer>
+<script>
+(function() {
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const mainNav = document.querySelector('.main-nav');
+
+    if (menuToggle && mainNav) {
+        menuToggle.addEventListener('click', function() {
+            menuToggle.classList.toggle('active');
+            mainNav.classList.toggle('active');
+        });
+
+        const navLinks = mainNav.querySelectorAll('a');
+        navLinks.forEach(function(link) {
+            link.addEventListener('click', function() {
+                menuToggle.classList.remove('active');
+                mainNav.classList.remove('active');
+            });
+        });
+
+        document.addEventListener('click', function(event) {
+            if (!menuToggle.contains(event.target) && !mainNav.contains(event.target)) {
+                menuToggle.classList.remove('active');
+                mainNav.classList.remove('active');
+            }
+        });
+    }
+})();
+</script>
+</body>
+</html>
