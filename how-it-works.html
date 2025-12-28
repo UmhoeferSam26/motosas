@@ -14,15 +14,10 @@
                  alt="Motosas Logo"
                  class="logo-img">
         </a>
-        <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
         <nav class="main-nav">
             <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="how-it-works.html" class="active">How It Works</a>
+            <a href="about.html" class="active">About</a>
+            <a href="how-it-works.html">How It Works</a>
             <a href="products.html">Example Products</a>
             <a href="solutions.html">Our Solutions</a>
             <a href="faqs.html">FAQs</a>
@@ -31,12 +26,36 @@
                 <div class="lang-toggle">
                     <a href="about.html" class="active-lang">EN</a>
                     <span class="separator">|</span>
-                    <a href="polish/how-it-works.html">PL</a>
+                    <a href="https://polish--motosas.netlify.app/about.html">PL</a>
                 </div>
             </div>
         </nav>
     </div>
 </header>
+
+<style>
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.lang-toggle {
+    font-size: 0.9rem;
+}
+
+.active-lang {
+    font-weight: 600;
+}
+</style>
+
 
 <section class="page-hero">
     <div class="container">
@@ -65,12 +84,12 @@
                 <div class="card">
                     <h4>Step 1</h4>
                     <h3>Key Inside the Inner Pocket</h3>
-                    <p>Keyless fobs emit low power radio frequency signals. When the fob is placed in the Motosas inner pocket, it is surrounded by conductive layers that help contain those signals.</[...]
+                    <p>Keyless fobs emit low power radio frequency signals. When the fob is placed in the Motosas inner pocket, it is surrounded by conductive layers that help contain those signals.</p>
                 </div>
                 <div class="card">
                     <h4>Step 2</h4>
                     <h3>RF Signal Reduction</h3>
-                    <p>The layered construction is designed to reduce or block RF energy across key frequency bands commonly used by modern keyless systems, making it harder for relay equipment to det[...]
+                    <p>The layered construction is designed to reduce or block RF energy across key frequency bands commonly used by modern keyless systems, making it harder for relay equipment to detect and amplify the signal.</p>
                 </div>
             </div>
         </section>
@@ -111,35 +130,5 @@
     <p><strong>Address:</strong> 116 High Street, Epping, Essex, United Kingdom, CM16 4AF</p>
     <p><strong>Email:</strong> office@motosas.com</p>
 </footer>
-<script>
-(function() {
-    const menuToggle = document.querySelector('.mobile-menu-toggle');
-    const mainNav = document.querySelector('.main-nav');
-
-    if (menuToggle && mainNav) {
-        menuToggle.addEventListener('click', function() {
-            menuToggle.classList.toggle('active');
-            mainNav.classList.toggle('active');
-        });
-
-        // Close menu when clicking on a link
-        const navLinks = mainNav.querySelectorAll('a');
-        navLinks.forEach(function(link) {
-            link.addEventListener('click', function() {
-                menuToggle.classList.remove('active');
-                mainNav.classList.remove('active');
-            });
-        });
-
-        // Close menu when clicking outside
-        document.addEventListener('click', function(event) {
-            if (!menuToggle.contains(event.target) && !mainNav.contains(event.target)) {
-                menuToggle.classList.remove('active');
-                mainNav.classList.remove('active');
-            }
-        });
-    }
-})();
-</script>
 </body>
 </html>
