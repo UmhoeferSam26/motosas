@@ -1,45 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://motosas.netlify.app/</loc>
-    <lastmod>2025-11-26</lastmod>
+    <loc>https://motosas.netlify.app/English/</loc>
+    <lastmod>2025-12-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://motosas.netlify.app/about.html</loc>
-    <lastmod>2025-11-26</lastmod>
+    <loc>https://motosas.netlify.app/English/index.html</loc>
+    <lastmod>2025-12-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://motosas.netlify.app/English/about.html</loc>
+    <lastmod>2025-12-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://motosas.netlify.app/products.html</loc>
-    <lastmod>2025-11-26</lastmod>
+    <loc>https://motosas.netlify.app/English/products.html</loc>
+    <lastmod>2025-12-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://motosas.netlify.app/how-it-works.html</loc>
-    <lastmod>2025-11-26</lastmod>
+    <loc>https://motosas.netlify.app/English/how-it-works.html</loc>
+    <lastmod>2025-12-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://motosas.netlify.app/our-solutions.html</loc>
-    <lastmod>2025-11-26</lastmod>
+    <loc>https://motosas.netlify.app/English/our-solutions.html</loc>
+    <lastmod>2025-12-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://motosas.netlify.app/solutions.html</loc>
-    <lastmod>2025-11-26</lastmod>
+    <loc>https://motosas.netlify.app/English/solutions.html</loc>
+    <lastmod>2025-12-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://motosas.netlify.app/faqs.html</loc>
-    <lastmod>2025-11-26</lastmod>
+    <loc>https://motosas.netlify.app/English/faqs.html</loc>
+    <lastmod>2025-12-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://motosas.netlify.app/English/thank-you.html</loc>
+    <lastmod>2025-12-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
 </urlset>

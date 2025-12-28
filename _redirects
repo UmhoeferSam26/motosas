@@ -1,0 +1,12 @@
+# Redirect root to English folder
+/   /English/   301
+
+# Handle old paths that might still be bookmarked
+/index.html   /English/index.html   301
+/about.html   /English/about.html   301
+/how-it-works.html   /English/how-it-works.html   301
+/products.html   /English/products.html   301
+/solutions.html   /English/solutions.html   301
+/our-solutions.html   /English/our-solutions.html   301
+/faqs.html   /English/faqs.html   301
+/thank-you.html   /English/thank-you.html   301
