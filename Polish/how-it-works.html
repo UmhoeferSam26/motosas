@@ -30,9 +30,12 @@
             <div class="nav-right">
                 <a href="index.html#contact">Kontakt</a>
                 <div class="lang-toggle">
-                    <a href="https://motosas.com/English/how-it-works.html">EN</a>
-                    <span class="separator">|</span>
-                    <a href="how-it-works.html" class="active-lang">PL</a>
+                    <select class="lang-select" aria-label="Select language" onchange="location.href=this.value;">
+                        <option value="../English/how-it-works.html">English</option>
+                        <option value="how-it-works.html" selected>Polish</option>
+                        <option value="../German/how-it-works.html">German</option>
+                        <option value="../Spanish/how-it-works.html">Spanish</option>
+                    </select>
                 </div>
             </div>
         </nav>
@@ -57,9 +60,14 @@
     font-size: 0.9rem;
 }
 
-.active-lang {
-    font-weight: 600;
+.lang-toggle select {
+    font-size: 0.9rem;
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid #c7c7c7;
+    background-color: #fff;
 }
+
 </style>
 
 
