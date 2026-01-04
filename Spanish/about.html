@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Motosas</title>
+    <link rel="stylesheet" href="../motosas.css">
+</head>
+<body>
+<header>
+    <div class="container header-content">
+        <a href="index.html" class="logo-text">
+            <img src="https://i.ibb.co/TqgFM9np/Logo-Featuring-Car-Silhouette-and-Signal-Waves.png"
+                 alt="Motosas Logo"
+                 class="logo-img">
+        </a>
+        <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="menu-overlay"></div>
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="how-it-works.html">How It Works</a>
+            <a href="products.html">Example Products</a>
+            <a href="solutions.html">Our Solutions</a>
+            <a href="faqs.html">FAQs</a>
+            <div class="nav-right">
+                <a href="index.html#contact">Contact</a>
+                <div class="lang-toggle">
+                    <a href="about.html" class="active-lang">EN</a>
+                    <span class="separator">|</span>
+                    <a href="../Polish/about.html">PL</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<style>
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.lang-toggle {
+    font-size: 0.9rem;
+}
+
+.active-lang {
+    font-weight: 600;
+}
+</style>
+
+
+<section class="page-hero">
+    <div class="container">
+        <h1>Who We Are</h1>
+        <p>Motosas focuses on practical, evidence-driven tools that help organisations reduce the risk of keyless car theft without adding friction to everyday use.</p>
+    </div>
+</section>
+
+<main>
+    <section class="content-section">
+        <h2 class="section-title">Our Focus</h2>
+        <p class="section-subtitle">
+            Keyless entry has changed how drivers interact with vehicles and how organised criminals attack them.
+            Motosas exists to help insurers, fleets and dealers respond with simple, scalable prevention tools.
+        </p>
+
+        <div class="grid-2">
+            <div>
+                <h3 style="font-size:1.3rem; color:#0D1A3A; margin-bottom:0.7rem;">Built Around Real World Use</h3>
+                <p style="margin-bottom:0.9rem;">
+                    Our starting point is always the driver: where keys are stored, how routines actually work in busy households,
+                    and how to support simple habits that reduce exposure to relay attacks.
+                </p>
+                <p style="margin-bottom:0.9rem;">
+                    Motosas pouches are designed to be clear, durable and easy to explain at point of sale or within policy documentation.
+                    They are intended to sit alongside, not replace, other security measures such as tracking, immobilisers and driveway security.
+                </p>
+            </div>
+            <div>
+                <h3 style="font-size:1.3rem; color:#0D1A3A; margin-bottom:0.7rem;">Partnership Led Approach</h3>
+                <p style="margin-bottom:0.9rem;">
+                    We work with B2B partners on volumes, branding and deployment. That can include co-branded pouches, insertion into welcome packs,
+                    targeted distribution for specific portfolios or use as part of claims prevention campaigns.
+                </p>
+                <p>
+                    Our aim is to provide a tool that is straightforward for frontline teams to describe and simple for customers to use correctly day after day.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section dark">
+        <h2 class="section-title">Technology &amp; Positioning</h2>
+        <p class="section-subtitle">
+            Motosas pouches are based on Faraday style RF shielding, a principle that has been used for decades in sectors such as defence and aerospace.
+        </p>
+
+        <div class="grid-3">
+            <div class="card">
+                <h4>Proven Principles</h4>
+                <p>Conductive layers help reduce or block RF signals across key frequency bands commonly used by keyless vehicle systems when the pouch is used correctly.</p>
+            </div>
+            <div class="card">
+                <h4>Testing Friendly</h4>
+                <p>Independent testing can be aligned to recognised RF attenuation methods to check performance for specific key and vehicle combinations.</p>
+            </div>
+            <div class="card">
+                <h4>Clear Risk Language</h4>
+                <p>We describe Motosas as a prevention tool that supports wider risk reduction strategies, rather than as a guarantee that a vehicle cannot be stolen.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2>Explore a Pilot or Limited Rollout</h2>
+        <p>Whether you are an insurer, broker, dealer group or fleet operator, we can help shape a simple test or pilot programme to see how Motosas works within your existing processes.</p>
+        <a href="index.html#contact" class="cta-button">Discuss a Pilot</a>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Motosas. Specialist B2B keyless car theft risk reduction solutions. All rights reserved.</p>
+    <p><strong>Contact Number:</strong> 02039165235</p>
+    <p><strong>Address:</strong> 116 High Street, Epping, Essex, United Kingdom, CM16 4AF</p>
+    <p><strong>Email:</strong> office@motosas.com</p>
+</footer>
+<script>
+(function() {
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const mainNav = document.querySelector('.main-nav');
+    const menuOverlay = document.querySelector('.menu-overlay');
+
+    function toggleMenu() {
+        menuToggle.classList.toggle('active');
+        mainNav.classList.toggle('active');
+        menuOverlay.classList.toggle('active');
+        document.body.style.overflow = mainNav.classList.contains('active') ? 'hidden' : '';
+    }
+
+    function closeMenu() {
+        menuToggle.classList.remove('active');
+        mainNav.classList.remove('active');
+        menuOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    menuToggle.addEventListener('click', toggleMenu);
+    menuOverlay.addEventListener('click', closeMenu);
+
+    // Close menu when clicking a nav link
+    mainNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', closeMenu);
+    });
+
+    // Close menu on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && mainNav.classList.contains('active')) {
+            closeMenu();
+        }
+    });
+})();
+</script>
+</body>
+</html>
