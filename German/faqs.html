@@ -59,11 +59,12 @@
             <div class="nav-right">
                 <a href="index.html#contact">Kontakt</a>
                 <div class="lang-toggle">
-                    <a href="faqs.html" class="active-lang">DE</a>
-                    <span class="separator">|</span>
-                    <a href="../English/faqs.html">EN</a>
-                    <span class="separator">|</span>
-                    <a href="../Polish/faqs.html">PL</a>
+                    <select class="lang-select" aria-label="Select language" onchange="location.href=this.value;">
+                        <option value="../English/faqs.html">English</option>
+                        <option value="../Polish/faqs.html">Polish</option>
+                        <option value="faqs.html" selected>German</option>
+                        <option value="../Spanish/faqs.html">Spanish</option>
+                    </select>
                 </div>
             </div>
         </nav>
@@ -88,9 +89,14 @@
     font-size: 0.9rem;
 }
 
-.active-lang {
-    font-weight: 600;
+.lang-toggle select {
+    font-size: 0.9rem;
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid #c7c7c7;
+    background-color: #fff;
 }
+
 </style>
 
 <section class="page-hero">
