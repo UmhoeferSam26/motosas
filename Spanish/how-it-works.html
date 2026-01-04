@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How It Works | Motosas Faraday Shielding</title>
+    <link rel="stylesheet" href="../motosas.css">
+</head>
+<body>
+<header>
+    <div class="container header-content">
+        <a href="index.html" class="logo-text">
+            <img src="https://i.ibb.co/TqgFM9np/Logo-Featuring-Car-Silhouette-and-Signal-Waves.png"
+                 alt="Motosas Logo"
+                 class="logo-img">
+        </a>
+        <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="menu-overlay"></div>
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="how-it-works.html" class="active">How It Works</a>
+            <a href="products.html">Example Products</a>
+            <a href="solutions.html">Our Solutions</a>
+            <a href="faqs.html">FAQs</a>
+            <div class="nav-right">
+                <a href="index.html#contact">Contact</a>
+                <div class="lang-toggle">
+                    <a href="how-it-works.html" class="active-lang">EN</a>
+                    <span class="separator">|</span>
+                    <a href="../Polish/how-it-works.html">PL</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<style>
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.lang-toggle {
+    font-size: 0.9rem;
+}
+
+.active-lang {
+    font-weight: 600;
+}
+</style>
+
+
+<section class="page-hero">
+    <div class="container">
+        <h1>How It Works: <span class="highlight">Faraday Style Shielding</span></h1>
+        <p>Understanding the RF shielding principle behind Motosas and how it helps reduce relay attack risk when used correctly.</p>
+    </div>
+</section>
+
+<main>
+    <section class="content-section">
+        <div class="content-section">
+            <div class="section-subtitle" style="text-align:left; max-width:1000px;">
+                <strong>Relay attacks</strong> use electronic devices to capture and boost the signal from a keyless fob, even through walls.
+                The relayed signal can trick the car into “thinking” the key is nearby, allowing thieves to unlock and start the vehicle in seconds.
+            </div>
+        </div>
+
+        <section class="content-section">
+            <h2 class="section-title">The Motosas Approach</h2>
+            <p class="section-subtitle">
+                <p>Motosas pouches use layered RF shielding materials to help reduce or block the signal from keyless fobs when they
+                are stored in the protected inner pocket. This makes relay attacks significantly harder to carry out.
+            </p>
+
+            <div class="grid-2">
+                <div class="card">
+                    <h4>Step 1</h4>
+                    <h3>Key Inside the Inner Pocket</h3>
+                    <p>Keyless fobs emit low power radio frequency signals. When the fob is placed in the Motosas inner pocket, it is surrounded by conductive layers that help contain those signals.</p>
+                </div>
+                <div class="card">
+                    <h4>Step 2</h4>
+                    <h3>RF Signal Reduction</h3>
+                    <p>The layered construction is designed to reduce or block RF energy across key frequency bands commonly used by modern keyless systems, making it harder for relay equipment to detect and amplify the signal.</p>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <section class="content-section dark">
+        <h2 class="section-title">Why This Method Works</h2>
+        <p class="section-subtitle">
+            RF shielding is a well-established technique. We apply it specifically to the way drivers store their keys, with a focus on usability and consistency.
+        </p>
+
+        <div class="grid-3">
+            <div class="card">
+                <h4>Instant When Used</h4>
+                <p>No pairing, charging or configuration. Once the key is in the inner pocket and the pouch is closed, the shielding is in place.</p>
+            </div>
+            <div class="card">
+                <h4>Simple to Explain</h4>
+                <p>If the key is in the pouch, it is shielded. This simplicity makes it easier for frontline staff to explain and for drivers to adopt as a habit.</p>
+            </div>
+            <div class="card">
+                <h4>No Power Source</h4>
+                <p>No batteries or apps to maintain. The shielding comes from the physical construction of the pouch itself.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2>See the Shielding in Your Own Environment</h2>
+        <p>Request a sample pack to test Motosas with your own keys and vehicles, and explore how it could support your existing risk reduction strategy.</p>
+        <a href="index.html#contact" class="cta-button">Request a Sample Pack</a>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Motosas. Specialist B2B keyless car theft risk reduction solutions. All rights reserved.</p>
+    <p><strong>Contact Number:</strong> 02039165235</p>
+    <p><strong>Address:</strong> 116 High Street, Epping, Essex, United Kingdom, CM16 4AF</p>
+    <p><strong>Email:</strong> office@motosas.com</p>
+</footer>
+<script>
+(function() {
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const mainNav = document.querySelector('.main-nav');
+    const menuOverlay = document.querySelector('.menu-overlay');
+
+    function toggleMenu() {
+        menuToggle.classList.toggle('active');
+        mainNav.classList.toggle('active');
+        menuOverlay.classList.toggle('active');
+        document.body.style.overflow = mainNav.classList.contains('active') ? 'hidden' : '';
+    }
+
+    function closeMenu() {
+        menuToggle.classList.remove('active');
+        mainNav.classList.remove('active');
+        menuOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    menuToggle.addEventListener('click', toggleMenu);
+    menuOverlay.addEventListener('click', closeMenu);
+
+    // Close menu when clicking a nav link
+    mainNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', closeMenu);
+    });
+
+    // Close menu on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && mainNav.classList.contains('active')) {
+            closeMenu();
+        }
+    });
+})();
+</script>
+</body>
+</html>
