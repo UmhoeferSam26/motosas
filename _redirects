@@ -1,7 +1,7 @@
 # Redirect root to English folder
 /   /English/   301
 
-# Handle old paths that might still be bookmarked
+# Handle old paths that might still be bookmarked (with .html extension)
 /index.html   /English/index.html   301
 /about.html   /English/about.html   301
 /how-it-works.html   /English/how-it-works.html   301
@@ -10,3 +10,53 @@
 /our-solutions.html   /English/our-solutions.html   301
 /faqs.html   /English/faqs.html   301
 /thank-you.html   /English/thank-you.html   301
+
+# Handle paths without .html extension (root level)
+/index   /English/index.html   301
+/about   /English/about.html   301
+/how-it-works   /English/how-it-works.html   301
+/products   /English/products.html   301
+/solutions   /English/solutions.html   301
+/our-solutions   /English/our-solutions.html   301
+/faqs   /English/faqs.html   301
+/thank-you   /English/thank-you.html   301
+
+# Handle paths without .html extension (English)
+/English/index   /English/index.html   301
+/English/about   /English/about.html   301
+/English/how-it-works   /English/how-it-works.html   301
+/English/products   /English/products.html   301
+/English/solutions   /English/solutions.html   301
+/English/our-solutions   /English/our-solutions.html   301
+/English/faqs   /English/faqs.html   301
+/English/thank-you   /English/thank-you.html   301
+
+# Handle paths without .html extension (Polish)
+/Polish/index   /Polish/index.html   301
+/Polish/about   /Polish/about.html   301
+/Polish/how-it-works   /Polish/how-it-works.html   301
+/Polish/products   /Polish/products.html   301
+/Polish/solutions   /Polish/solutions.html   301
+/Polish/our-solutions   /Polish/our-solutions.html   301
+/Polish/faqs   /Polish/faqs.html   301
+/Polish/thank-you   /Polish/thank-you.html   301
+
+# Handle paths without .html extension (German)
+/German/index   /German/index.html   301
+/German/about   /German/about.html   301
+/German/how-it-works   /German/how-it-works.html   301
+/German/products   /German/products.html   301
+/German/solutions   /German/solutions.html   301
+/German/our-solutions   /German/our-solutions.html   301
+/German/faqs   /German/faqs.html   301
+/German/thank-you   /German/thank-you.html   301
+
+# Handle paths without .html extension (Spanish)
+/Spanish/index   /Spanish/index.html   301
+/Spanish/about   /Spanish/about.html   301
+/Spanish/how-it-works   /Spanish/how-it-works.html   301
+/Spanish/products   /Spanish/products.html   301
+/Spanish/solutions   /Spanish/solutions.html   301
+/Spanish/our-solutions   /Spanish/our-solutions.html   301
+/Spanish/faqs   /Spanish/faqs.html   301
+/Spanish/thank-you   /Spanish/thank-you.html   301
